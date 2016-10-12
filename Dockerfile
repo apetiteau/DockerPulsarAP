@@ -15,9 +15,9 @@ RUN pip install --upgrade pip
 
 ENV CXX c++
 
-wget http://pulsarastronomy.net/psrsoft/psrsoft.tar.gz
-tar xvzf psrsoft.tar.gz
-cp psrsoft/config/profile.example psrsoft/config/profile
+RUN wget http://pulsarastronomy.net/psrsoft/psrsoft.tar.gz
+RUN tar xvzf psrsoft.tar.gz
+RUN cp psrsoft/config/profile.example psrsoft/config/profile
 
 
 WORKDIR /workspace
