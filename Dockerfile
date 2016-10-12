@@ -1,4 +1,4 @@
-thon-pip python-ipython numpyFROM centos:latest
+FROM centos:latest
 MAINTAINER Antoine Petiteau petiteau@apc.in2p3.fr
 
 RUN yum -y update
