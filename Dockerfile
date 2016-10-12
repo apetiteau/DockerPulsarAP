@@ -15,9 +15,13 @@ RUN pip install --upgrade pip
 
 ENV CXX c++
 
+RUN mkdir /workspace/tools
+
 RUN wget http://pulsarastronomy.net/psrsoft/psrsoft.tar.gz
 RUN tar xvzf psrsoft.tar.gz
 RUN cp psrsoft/config/profile.example psrsoft/config/profile
+RUN mv psrsoft /workspace/tools/.
+ENV PSRSOFT_DIR /workspace/tools/psrsoft
 
 
 WORKDIR /workspace
